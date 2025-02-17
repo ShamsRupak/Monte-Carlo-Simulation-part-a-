@@ -1,2 +1,6 @@
 # Monte-Carlo-Simulation-part-a-
 Write a function in MATLAB that estimates the value of pi using a Monte Carlo simulation (see below). The function should take as input the number of points to use in the simulation and output the estimated value of pi. Write the function using element-wise operations and logical variables; do not use a "for" loop.
+
+A Monte Carlo simulation estimates a probability by running repeated experiments, sorting the results into categories, and comparing the frequency of each type of result. 
+
+In this case, we can estimate pi geometrically. If we generate random numbers (independent and uniformly distributed) between 0 and 1, we can group them by pairs and call each pair a point within the unit square [0,1]x[0,1]. One quarter of the unit circle overlaps this square. Each point is one Monte Carlo experiment, and the result of each experiment is whether or not it falls inside the unit circle. The probability any one experiment falls within the unit circle is equal to the ratio between the areas of the unit square and the quarter of the unit circle overlapping it; that is (pi/4):1. Thus performing this simulation finds an estimate for our probability, which has theoretical value pi/4. Multiply this by 4 and we get an estimate for the value of pi.
